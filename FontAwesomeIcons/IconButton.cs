@@ -21,7 +21,11 @@ namespace FontAwesomeIcons
         {
 
         }
-
+        public IconButton(IconType type, int size, Color normalColor, Color hoverColor)
+            : this(type, size, normalColor, hoverColor, false, null)
+        { 
+        
+        }
         /// <summary>
         /// Initializes a new instance of the <see cref="IconButton" /> class.
         /// </summary>
@@ -31,7 +35,7 @@ namespace FontAwesomeIcons
         /// <param name="hoverColor">Color to use when hovered over.</param>
         /// <param name="selectable">NOT YET IMPLEMENTED. If set to <c>true</c> the icon will be selectable using the keyboard (tab-key).</param>
         /// <param name="toolTip">The tool tip text to use. Leave as null to not use a tooltip.</param>
-        public IconButton(IconType type, int size, Color normalColor, Color hoverColor, bool selectable = false, string toolTip = null)
+        public IconButton(IconType type, int size, Color normalColor, Color hoverColor, bool selectable, string toolTip)
         {
             IconFont = null;
             BackColor = Color.Transparent;
